@@ -1,4 +1,4 @@
-import { useCounterContext } from '@/store/counter/context';
+import { useCounterContext } from '@/store/counter';
 
 export const Counter = () => {
   const { count } = useCounterContext();
