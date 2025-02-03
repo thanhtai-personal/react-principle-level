@@ -7,7 +7,7 @@ import { CounterContextProvider } from '@/store/counter/context';
 const Home = () => {
   return (
     <>
-      <div>
+      <div className="flex flex-row items-center">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
