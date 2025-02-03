@@ -1,10 +1,8 @@
 import reactLogo from '@/assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import viteLogo from '@/assets/vite.svg';
+import { Counter } from '@/components/Counter';
 
-import { Counter } from './components/Counter';
-
-function App() {
+const Home = () => {
   return (
     <>
       <div>
@@ -22,6 +20,6 @@ function App() {
       </p>
     </>
   );
-}
+};
 
-export default App;
+export default Home;
