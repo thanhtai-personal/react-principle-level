@@ -3,5 +3,9 @@
   "quoteProps": "as-needed",
   "trailingComma": "es5",
   "singleQuote": true,
-  "parser": "typescript"
+  "parser": "typescript",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx"],
+  "tailwindPreserveWhitespace": true,
+  "tailwindPreserveDuplicates": true
 }
