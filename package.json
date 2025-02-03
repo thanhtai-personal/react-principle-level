@@ -10,7 +10,7 @@
     "format": "prettier \"**/*.{ts,tsx}\" --write",
     "preview": "vite preview",
     "prepare": "husky",
-    "precommit": "prettier \"**/*.{ts,tsx}\" --write && eslint . --fix"
+    "precommit": "prettier \"**/*.{ts,tsx}\" --check && eslint ."
   },
   "dependencies": {
     "react": "^18.3.1",
