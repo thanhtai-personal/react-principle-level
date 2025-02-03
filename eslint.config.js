@@ -4,6 +4,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import prettier from 'eslint-plugin-prettier';
+import sonarjs from 'eslint-plugin-sonarjs';
+
+import sonarjsRules from './sonarjs.rules.js';
 
 export default {
   ignores: ['dist'],
@@ -21,12 +24,14 @@ export default {
     '@typescript-eslint': tseslint.plugin,
     'react-hooks': reactHooks,
     'react-refresh': reactRefresh,
-    prettier: prettier,
+    prettier,
+    sonarjs
   },
   rules: {
     ...js.configs.recommended.rules,
     ...tseslint.configs.recommended.rules,
     ...reactHooks.configs.recommended.rules,
+    ...sonarjsRules,
     'prettier/prettier': 'error', // Ensure Prettier formatting issues are reported
     'react-refresh/only-export-components': [
       'warn',
