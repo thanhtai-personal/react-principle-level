@@ -6,3 +6,4 @@ Commit: [bdcc21b71c7f8c0965232e1fbe9b18f16437e74c](https://github.com/thanhtai-p
 - https://tailwindcss.com/docs/installation/using-vite
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 - https://www.material-tailwind.com/docs/react/guide/cra
+- Templates: https://www.material-tailwind.com/blocks
