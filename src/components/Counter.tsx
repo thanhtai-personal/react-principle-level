@@ -1,16 +1,13 @@
-import { useState } from 'react';
+import { useCounterContext } from '@/store/counter/context';
 
-export const Counter = (props: any) => {
-  const [count, setCount] = useState(0);
+export const Counter = () => {
+  const { count } = useCounterContext();
 
   return (
     <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
+      <button onClick={() => count.value++}>
+        count is <span>{count}</span>
       </button>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
     </div>
   );
 };

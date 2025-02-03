@@ -13,6 +13,7 @@
     "precommit": "prettier \"**/*.{ts,tsx}\" --check && eslint ."
   },
   "dependencies": {
+    "@preact/signals-react": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.29.0"
