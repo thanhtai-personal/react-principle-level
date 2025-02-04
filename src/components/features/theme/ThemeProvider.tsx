@@ -1,6 +1,7 @@
 import { ThemeProviderContext } from '@/contexts/theme/context';
 import { Theme } from '@/types/Theme';
-import { ReactNode, useEffect, useState } from 'react';
+import { useSignal, useSignalEffect } from '@preact/signals-react';
+import { ReactNode } from 'react';
 
 type ThemeProviderProps = {
   children: ReactNode;
@@ -14,16 +15,16 @@ export function ThemeProvider({
   storageKey = 'vite-ui-theme',
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
+  const theme = useSignal<Theme>(
+    (localStorage.getItem(storageKey) as Theme) || defaultTheme
   );
 
-  useEffect(() => {
+  useSignalEffect(() => {
     const root = window.document.documentElement;
 
     root.classList.remove('light', 'dark');
 
-    if (theme === 'system') {
+    if (theme.value === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
         .matches
         ? 'dark'
@@ -33,19 +34,20 @@ export function ThemeProvider({
       return;
     }
 
-    root.classList.add(theme);
-  }, [theme]);
-
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
-  };
+    root.classList.add(theme.value);
+  });
 
   return (
-    <ThemeProviderContext.Provider {...props} value={value}>
+    <ThemeProviderContext.Provider
+      {...props}
+      value={{
+        theme: theme.value,
+        setTheme: (themeValue: Theme) => {
+          localStorage.setItem(storageKey, themeValue);
+          theme.value = themeValue;
+        },
+      }}
+    >
       {children}
     </ThemeProviderContext.Provider>
   );
