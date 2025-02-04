@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --fix",
-    "format": "prettier \"**/*.{ts,tsx}\" --write",
+    "format": "prettier \"**/*.{ts,tsx}\" --write && npm run lint",
     "preview": "vite preview",
     "prepare": "husky",
     "precommit": "prettier \"**/*.{ts,tsx}\" --check && eslint ."
