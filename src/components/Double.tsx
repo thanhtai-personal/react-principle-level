@@ -1,4 +1,4 @@
-import { useCounterContext } from '@/store/counter';
+import { useCounterContext } from '@/contexts/counter';
 
 export const Double = (props: any) => {
   const { double } = useCounterContext();
