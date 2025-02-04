@@ -1,7 +1,7 @@
 import './App.css';
 import { ReactNode, Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Loading } from './components/Loading';
+import { Loading } from './components/common/Loading';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const NotFound = lazy(() => import('./pages/NotFound'));

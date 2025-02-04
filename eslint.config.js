@@ -33,10 +33,11 @@ export default {
     ...reactHooks.configs.recommended.rules,
     ...sonarjsRules,
     'prettier/prettier': 'error', // Ensure Prettier formatting issues are reported
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': 'off',
+    // 'react-refresh/only-export-components': [
+    //   'warn',
+    //   { allowConstantExport: true },
+    // ],
     // Disable no-unused-vars in general but allow props and state
     'no-unused-vars': 'off', // 'warn',
     '@typescript-eslint/no-unused-vars': 'off',

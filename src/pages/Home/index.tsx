@@ -1,7 +1,7 @@
 import reactLogo from '@/assets/react.svg';
 import viteLogo from '@/assets/vite.svg';
-import { Counter } from '@/components/Counter';
-import { Double } from '@/components/Double';
+import { Counter } from '@/components/features/Counter';
+import { Double } from '@/components/features/Double';
 import { CounterContextProvider } from '@/contexts/counter';
 
 const Home = () => {
