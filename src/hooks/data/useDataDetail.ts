@@ -1,4 +1,4 @@
-import { IDataResponse } from '@/interfaces/IDataResponse';
+import { IDataResponse } from '@/interfaces/common/IDataResponse';
 import { get } from '@/utils/lodash';
 import { useQuery } from '@tanstack/react-query';
 

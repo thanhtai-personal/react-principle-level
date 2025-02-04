@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Axios, AxiosInstance } from 'axios';
 import { useMemo } from 'react';
-import { IDataResponse } from '@/interfaces/IDataResponse';
+import { IDataResponse } from '@/interfaces/common/IDataResponse';
 import { get } from '@/utils/lodash';
 import { buildParams } from '@/utils/buildParams';
 
