@@ -6,8 +6,13 @@ Commit: [bdcc21b71c7f8c0965232e1fbe9b18f16437e74c](https://github.com/thanhtai-p
 Commit: [be5f2403973f7e72b81b864c66e084872a56e6e2](https://github.com/thanhtai-personal/react-principle-level/commit/be5f2403973f7e72b81b864c66e084872a56e6e2)
 - Install shadcn
 ```npx shadcn@latest init```
-```npm install shadcn -g```
+```npm install shadcn@latest -g```
 Commit: [717022407247c60210d46929f67f0b09670047b8](https://github.com/thanhtai-personal/react-principle-level/commit/717022407247c60210d46929f67f0b09670047b8)
+
+```
+// Add all components
+shadcn add -a
+```
 
 # REFs:
 - https://tailwindcss.com/docs/installation/using-vite
