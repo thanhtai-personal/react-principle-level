@@ -2,7 +2,7 @@ import reactLogo from '@/assets/react.svg';
 import viteLogo from '@/assets/vite.svg';
 import { Counter } from '@/components/Counter';
 import { Double } from '@/components/Double';
-import { CounterContextProvider } from '@/contexts/counter/context';
+import { CounterContextProvider } from '@/contexts/counter';
 
 const Home = () => {
   return (
