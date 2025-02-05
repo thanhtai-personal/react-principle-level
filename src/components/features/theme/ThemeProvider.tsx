@@ -1,5 +1,5 @@
 import { ThemeProviderContext } from '@/contexts/theme/context';
-import { Theme } from '@/types/Theme';
+import { THEME, Theme } from '@/types/Theme';
 import { useSignal, useSignalEffect } from '@preact/signals-react';
 import { ReactNode } from 'react';
 
@@ -11,7 +11,7 @@ type ThemeProviderProps = {
 
 export function ThemeProvider({
   children,
-  defaultTheme = 'system',
+  defaultTheme = THEME.system,
   storageKey = 'vite-ui-theme',
   ...props
 }: ThemeProviderProps) {
@@ -38,16 +38,7 @@ export function ThemeProvider({
   });
 
   return (
-    <ThemeProviderContext.Provider
-      {...props}
-      value={{
-        theme: theme.value,
-        setTheme: (themeValue: Theme) => {
-          localStorage.setItem(storageKey, themeValue);
-          theme.value = themeValue;
-        },
-      }}
-    >
+    <ThemeProviderContext.Provider {...props} value={{ theme }}>
       {children}
     </ThemeProviderContext.Provider>
   );
