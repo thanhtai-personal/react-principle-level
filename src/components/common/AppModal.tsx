@@ -6,51 +6,101 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/common/shadcn/dialog';
 import { ModalController } from '@/types/ModalController';
 import {
   ForwardedRef,
-  ReactNode,
+  ReactElement,
   forwardRef,
   useImperativeHandle,
+  useMemo,
+  useState,
 } from 'react';
 
 type Props = {
-  triggerElement: ReactNode;
-  children: ReactNode;
-  footer: ReactNode;
+  triggerElement: ReactElement;
+  children: ReactElement;
+  footer?: ReactElement;
+  header?: ReactElement;
   texts?: {
     submit?: string;
     title?: string;
     titleDescription?: string;
   };
   className?: string;
+  onSubmit?: () => Promise<void>;
 };
 
 export const AppModal = forwardRef(
   (
-    { triggerElement, children, footer, texts, className = '' }: Props,
+    {
+      triggerElement,
+      children,
+      footer,
+      header,
+      texts,
+      className = '',
+      onSubmit,
+    }: Props,
     ref: ForwardedRef<ModalController>
   ) => {
-    useImperativeHandle(ref, () => ({}));
+    const [opened, setOpenned] = useState(false);
+
+    useImperativeHandle(ref, () => ({
+      close: () => {
+        setOpenned(false);
+      },
+      open: () => {
+        setOpenned(true);
+      },
+      toggle: () => {
+        setOpenned((prev) => !prev);
+      },
+    }));
+
+    const handleSubmit = async () => {
+      await onSubmit?.();
+    };
+
+    const footerElement = useMemo(() => {
+      if (footer) return footer;
+
+      if (texts?.submit) {
+        return (
+          <Button type="submit" onClick={handleSubmit}>
+            {texts.submit}
+          </Button>
+        );
+      }
+
+      return null;
+    }, [footer, texts?.submit, handleSubmit]);
 
     return (
-      <Dialog>
-        <DialogTrigger asChild>{triggerElement}</DialogTrigger>
+      <Dialog
+        open={opened}
+        onOpenChange={() => {
+          setOpenned((prev) => !prev);
+        }}
+      >
+        {triggerElement}
         <DialogContent className={`sm:max-w-[425px] ${className}`}>
           <DialogHeader>
-            {texts?.title && <DialogTitle>{texts?.title}</DialogTitle>}
-            {texts?.titleDescription && (
-              <DialogDescription>{texts?.titleDescription}</DialogDescription>
+            {header ? (
+              header
+            ) : (
+              <>
+                {texts?.title && <DialogTitle>{texts?.title}</DialogTitle>}
+                {texts?.titleDescription && (
+                  <DialogDescription>
+                    {texts?.titleDescription}
+                  </DialogDescription>
+                )}
+              </>
             )}
           </DialogHeader>
           {children}
-          {
-            <DialogFooter>
-              {footer ? footer : <Button type="submit">{texts?.submit}</Button>}
-            </DialogFooter>
-          }
+          {footerElement && <DialogFooter>{footerElement}</DialogFooter>}
         </DialogContent>
       </Dialog>
     );
