@@ -1,19 +1,10 @@
-export interface IDataResponse<T = any> {
-  Success?: boolean;
-  Message?: string | null;
-  Data?: T;
-  success?: boolean;
-  message?: string | null;
-  data?: T;
-  result:
-    | any
-    | {
-        items: T[];
-        pageNumber: number;
-        pageSize: number;
-        totalCount: number;
-        totalPages: number;
-      };
-  statusCode?: number;
-  errorMessages?: any[];
+import { AxiosResponse } from 'axios';
+
+export interface IDataResponse<T = any, D = any> extends AxiosResponse<T, D> {
+  // data: T;
+  // status: number;
+  // statusText: string;
+  // headers: RawAxiosResponseHeaders | AxiosResponseHeaders;
+  // config: InternalAxiosRequestConfig<D>;
+  // request?: any;
 }

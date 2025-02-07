@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Axios, AxiosInstance } from 'axios';
 import { useMemo } from 'react';
 import { IDataResponse } from '@/interfaces/common/IDataResponse';
+import { IPaginationResponse } from '@/interfaces/common/IPaginationResponse';
 import { get } from '@/utils/lodash';
 import { buildParams } from '@/utils/buildParams';
 
@@ -19,7 +20,9 @@ export const useDataList = <T, K>(
   const queryFn = async () => {
     if (params) {
       const finalParams = buildParams(params);
-      const response: any = await apiClient.get<IDataResponse<T>>(apiPath, {
+      const response: any = await apiClient.get<
+        IDataResponse<IPaginationResponse<T>, any>
+      >(apiPath, {
         params: finalParams,
       });
       return getDataPath ? get(response, getDataPath) : response;
@@ -27,15 +30,17 @@ export const useDataList = <T, K>(
     return null;
   };
 
-  const { data, isLoading, refetch } = useQuery<IDataResponse<T> | null>({
+  const { data, isLoading, refetch } = useQuery<
+    IDataResponse<IPaginationResponse<T> | null, any>
+  >({
     queryKey: query,
     queryFn,
     enabled: !!params,
   });
   const pagination = useMemo(
     () => ({
-      totalCount: data?.result?.totalCount || 0,
-      totalPages: data?.result?.totalPages || 1,
+      totalCount: data?.data?.totalCount || 0,
+      totalPages: data?.data?.totalPages || 1,
     }),
     [data]
   );
@@ -44,7 +49,7 @@ export const useDataList = <T, K>(
     {
       isLoading,
       pagination,
-      dataList: data?.result?.items || [],
+      dataList: data?.data?.items || [],
     },
     {
       refetch,

@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 export const useDataDetail = <T>(
   id?: string,
-  getDetailServiceFunction?: (id: string) => Promise<IDataResponse<any>>,
+  getDetailServiceFunction?: (id: string) => Promise<IDataResponse<T>>,
   options?: {
     queryKey?: string;
     getDataPath?: string;
