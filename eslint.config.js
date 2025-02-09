@@ -7,9 +7,10 @@ import prettier from 'eslint-plugin-prettier';
 import sonarjs from 'eslint-plugin-sonarjs';
 
 import sonarjsRules from './sonarjs.rules.js';
+import vitest from "eslint-plugin-vitest";
 
 export default {
-  ignores: ['dist'],
+  ignores: ['dist', 'vitest.setup.ts'],
   files: ['**/*.{ts,tsx}'],
   languageOptions: {
     ecmaVersion: 2020,
@@ -25,13 +26,15 @@ export default {
     'react-hooks': reactHooks,
     'react-refresh': reactRefresh,
     prettier,
-    sonarjs
+    sonarjs,
+    vitest
   },
   rules: {
     ...js.configs.recommended.rules,
     ...tseslint.configs.recommended.rules,
     ...reactHooks.configs.recommended.rules,
     ...sonarjsRules,
+    ...vitest.configs.recommended.rules,
     'prettier/prettier': 'error', // Ensure Prettier formatting issues are reported
     'react-refresh/only-export-components': 'off',
     // 'react-refresh/only-export-components': [
