@@ -22,7 +22,11 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/**/*.d.ts', '**/src/components/common/shadcn/**'],
+      exclude: [
+        'src/**/*.d.ts',
+        '**/src/components/common/shadcn/**',
+        '**/src/assets/icons/**',
+      ],
     },
     include: ['**/*.{test,spec}.{ts,tsx}'],
     exclude: [

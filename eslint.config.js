@@ -10,7 +10,7 @@ import sonarjsRules from './sonarjs.rules.js';
 import vitest from "eslint-plugin-vitest";
 
 export default {
-  ignores: ['dist', 'vitest.setup.ts'],
+  ignores: ['dist', 'vitest.setup.ts', '**/*.test.ts', '**/*.test.tsx'],
   files: ['**/*.{ts,tsx}'],
   languageOptions: {
     ecmaVersion: 2020,

@@ -6,11 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { AppStore } from './store/index.ts';
 import { ThemeProvider } from '@/components/features/theme/ThemeProvider.tsx';
 import { Layout } from '@/components/features/layout/index.tsx';
+import { THEME } from './types/Theme.ts';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AppStore.MobxProvider>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ThemeProvider defaultTheme={THEME.dark} storageKey="vite-ui-theme">
         <Layout>
           <BrowserRouter
             future={{
