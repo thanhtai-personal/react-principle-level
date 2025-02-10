@@ -10,7 +10,10 @@
     "format": "prettier \"**/*.{ts,tsx}\" --write && npm run lint",
     "preview": "vite preview",
     "prepare": "husky",
-    "precommit": "prettier \"**/*.{ts,tsx}\" --check && eslint ."
+    "precommit": "prettier \"**/*.{ts,tsx}\" --check && eslint .",
+    "precommit:test": "prettier \"**/*.{ts,tsx}\" --check && eslint . && vitest --run",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -69,10 +72,13 @@
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@tailwindcss/vite": "^4.0.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitest/coverage-v8": "^3.0.5",
     "autoprefixer": "^10.4.20",
     "babel-plugin-react-compiler": "^19.0.0-beta-714736e-20250131",
     "eslint": "^9.17.0",
@@ -81,8 +87,11 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-sonarjs": "^3.0.1",
+    "eslint-plugin-vitest": "^0.5.4",
     "globals": "^15.14.0",
+    "happy-dom": "^17.0.2",
     "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
     "lint-staged": "^15.4.3",
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
@@ -90,10 +99,10 @@
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vitest": "^3.0.5"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "prettier \"**/*.{ts,tsx}\" --write",
-    "**/*": "eslint . --fix"
+    "**/*.{ts,tsx}": ["prettier \"**/*.{ts,tsx}\" --write", "vitest related --run", "eslint related . --fix"]
   }
 }
