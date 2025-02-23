@@ -1,39 +1,40 @@
 import { TMenuItem } from '@/types/TMenuItem';
+import { topElementIds } from './topElementIds';
 
 export const menuItems: TMenuItem[] = [
   {
     id: 1,
     name: 'home',
     label: 'Home',
-    url: '#home',
+    url: topElementIds.banner,
     className: 'menu-item',
   },
   {
     id: 2,
     name: 'about',
     label: 'About',
-    url: '#about',
+    url: topElementIds.what,
     className: 'menu-item',
   },
   {
     id: 3,
     name: 'features',
     label: 'Features',
-    url: '#features',
+    url: topElementIds.features,
     className: 'menu-item',
   },
   {
     id: 4,
     name: 'how-it-works',
-    label: 'How it works?',
-    url: '#how-it-works',
+    label: topElementIds.how,
+    url: 'how-it-works',
     className: 'menu-item',
   },
   {
     id: 5,
     name: 'roadmap',
     label: 'Roadmap',
-    url: '#roadmap',
+    url: topElementIds.roadnap,
     className: 'menu-item',
   },
   {
@@ -48,7 +49,7 @@ export const menuItems: TMenuItem[] = [
           key={item.id}
           // href={item.url}
           // target={item.target || '_self'}
-          className={`join-btn my-6 flex w-full items-center py-2 text-lg font-semibold ${item.className}`}
+          className={`join-btn my-6 flex w-full items-center py-2 text-lg font-semibold duration-200 hover:-translate-y-[5px] ${item.className}`}
           onClick={() => {
             actions?.onClick?.(item);
           }}

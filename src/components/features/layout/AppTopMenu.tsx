@@ -43,8 +43,16 @@ export function AppTopMenu() {
             return (
               <a
                 key={item.id}
-                href={item.url}
-                target={item.target || '_self'}
+                // href={`#${item.url}`}
+                onClick={() => {
+                  const findElement = document.getElementById(item.url);
+                  if (findElement) {
+                    findElement.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }
+                }}
+                // target={item.target || '_self'}
                 className={`flex w-full items-center justify-center py-2 text-lg font-semibold ${item.className}`}
               >
                 {item.label}

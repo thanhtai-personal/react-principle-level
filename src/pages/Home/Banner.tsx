@@ -15,11 +15,11 @@ export const Banner = () => {
             transactions on the Monad network.
           </div>
           <div className="mt-10 flex w-full items-center justify-center">
-            <button className="btn-primary mr-4 flex items-center justify-center px-4 py-2 lg:px-8">
+            <button className="btn-primary mr-4 flex items-center justify-center px-4 py-2 duration-200 hover:-translate-y-[3px] lg:px-8">
               <GetStartIcon />
               Get Started
             </button>
-            <button className="btn-secondary flex items-center justify-center px-4 py-2 lg:px-8">
+            <button className="btn-secondary flex items-center justify-center px-4 py-2 duration-200 hover:-translate-y-[3px] lg:px-8">
               <JoinBetaIcon />
               Join the Beta
             </button>

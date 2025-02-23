@@ -73,7 +73,7 @@ const Roadmap = () => {
           id="ver-arrow-progress"
         />
         <div className="mt-8 flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-4 lg:justify-center lg:gap-6">
-          {roadMapItems.map((item) => {
+          {roadMapItems.map((item, index) => {
             return (
               <div
                 key={item.id}

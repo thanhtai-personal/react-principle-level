@@ -12,7 +12,7 @@ export function Header({ fixed = false }: any) {
             <AppTopMenu />
             <AppNavigationMenu />
             <a
-              className={`join-btn hidden cursor-pointer items-center py-2 text-lg font-semibold lg:flex`}
+              className={`join-btn hidden cursor-pointer items-center py-2 text-lg font-semibold duration-200 hover:-translate-y-[3px] lg:flex`}
               onClick={() => {}}
             >
               Join for free

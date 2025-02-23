@@ -9,7 +9,7 @@ export const Footer = ({ fixed = false }: any) => {
     <div
       className={`${fixed ? 'absolute' : 'relative'} bottom-0 z-40 flex w-full flex-col items-center justify-center bg-[#0E100F] px-4 py-6 lg:px-16`}
     >
-      <div className="absolute bottom-0 left-0 hidden lg:flex">
+      <div className="absolute bottom-0 left-0 -z-[1] hidden lg:flex">
         <img src={footerBg} />
       </div>
       <div className="w-full px-2 lg:max-w-[1280px] lg:px-8">
@@ -28,7 +28,7 @@ export const Footer = ({ fixed = false }: any) => {
 
             <div className="mt-10 flex w-full flex-col">
               <div className="text">Building a project on Monad?</div>
-              <button className="btn-primary mr-4 mt-2 flex w-fit items-center justify-center px-4 py-2 lg:px-8">
+              <button className="btn-primary mr-4 mt-2 flex w-fit items-center justify-center px-4 py-2 duration-200 hover:-translate-y-[3px] lg:px-8">
                 Get in touch
               </button>
             </div>
@@ -38,22 +38,22 @@ export const Footer = ({ fixed = false }: any) => {
             <div className="flex flex-1 flex-col lg:flex-[0]">
               <div className="text-description-secondary">Features</div>
               <div className="mt-6 flex flex-col">
-                <div className="text">About</div>
+                <div className="text hover:underline">About</div>
               </div>
             </div>
 
             <div className="flex flex-1 flex-col lg:ml-28 lg:flex-[0]">
               <div className="text-description-secondary">Community</div>
               <div className="mt-6 flex flex-col">
-                <div className="text flex items-center">
+                <div className="text flex items-center duration-200 hover:-translate-y-[3px] hover:underline">
                   <TwitterIcon />
                   <div className="ml-2">Twitter</div>
                 </div>
-                <div className="text mt-4 flex items-center">
+                <div className="text mt-4 flex items-center duration-200 hover:-translate-y-[3px] hover:underline">
                   <TelegramIcon />
                   <div className="ml-2">Telegram</div>
                 </div>
-                <div className="text mt-4 flex items-center">
+                <div className="text mt-4 flex items-center duration-200 hover:-translate-y-[3px] hover:underline">
                   <DiscordIcon />
                   <div className="ml-2">Discord</div>
                 </div>
