@@ -8,20 +8,21 @@ const WhatIsNixusAIContent = (
         <RoundedStarIcon />
       </div>
 
-      <div className="text-title mt-8 flex w-full items-center justify-center px-4 lg:px-8 text-center"
+      <div
+        className="text-title mt-8 flex w-full items-center justify-center px-4 text-center lg:px-8"
         style={{
-          fontSize: "36px",
-          lineHeight: "44px",
+          fontSize: '36px',
+          lineHeight: '44px',
         }}
       >
         What is Nixus AI
       </div>
-      <div className="text-description-secondary mt-6 flex w-full items-center justify-center px-4 lg:px-8 text-center lg:max-w-[1080px] lg:!text-[#FFFFFF]">
+      <div className="text-description-secondary mt-6 flex w-full items-center justify-center px-4 text-center lg:max-w-[1080px] lg:px-8 lg:!text-[#FFFFFF]">
         <span>
-          <strong>Nixus AI</strong>&nbsp;is an intelligent AI agent built on the high-performance Monad
-          blockchain. It empowers users with comprehensive data insights,
-          simplified DeFi interactions, and personalized trading experiences—all
-          using natural language.
+          <strong>Nixus AI</strong>&nbsp;is an intelligent AI agent built on the
+          high-performance Monad blockchain. It empowers users with
+          comprehensive data insights, simplified DeFi interactions, and
+          personalized trading experiences—all using natural language.
         </span>
       </div>
     </div>
@@ -30,8 +31,8 @@ const WhatIsNixusAIContent = (
 
 const WhatIsNixusAI = () => {
   return (
-    <div className="relative flex w-full flex-col bg-[#0E100F] lg:px-4 lg:justify-center lg:items-center">
-      <div className="absolute w-full flex justify-center z-10 left-0 top-2 lg:top-[-270px] mt-4 justify-center]">
+    <div className="relative flex w-full flex-col bg-[#0E100F] lg:items-center lg:justify-center lg:px-4">
+      <div className="justify-center] absolute left-0 top-2 z-10 mt-4 flex w-full justify-center lg:top-[-270px]">
         <Graphic1 />
       </div>
       <div className="mt-[200px] w-full flex-col bg-transparent lg:mt-[60px] lg:max-w-[1280px]">
@@ -39,7 +40,7 @@ const WhatIsNixusAI = () => {
           {WhatIsNixusAIContent}
         </div>
         <div className="light-border-top hidden h-[375px] w-full flex-col bg-transparent lg:flex">
-          <div className="w-full h-full light-border-bg"></div>
+          <div className="light-border-bg h-full w-full"></div>
         </div>
         <div className="hidden w-full flex-col bg-transparent lg:flex">
           {WhatIsNixusAIContent}

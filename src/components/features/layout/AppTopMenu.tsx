@@ -27,7 +27,7 @@ export function AppTopMenu() {
         </div>
       </SheetTrigger>
       <SheetContent side="top">
-        <div className="shadow-header absolute left-0 top-0 flex w-full items-center justify-between px-4 lg:px-8 py-4">
+        <div className="shadow-header absolute left-0 top-0 flex w-full items-center justify-between px-4 py-4 lg:px-8">
           <a href="#" className="mr-6 flex items-center justify-center">
             <LogoIcon className="mr-2 flex h-6 w-6 items-center justify-center" />
             <div className="flex h-6 items-center justify-center">

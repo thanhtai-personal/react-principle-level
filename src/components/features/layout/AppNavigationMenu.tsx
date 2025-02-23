@@ -16,7 +16,7 @@ export const AppNavigationMenu = () => {
             ) : (
               <a
                 href={item.url}
-                className={`"group inline-flex h-9 w-max items-center justify-center rounded-md px-4 lg:px-8 py-2 text-sm font-medium transition-colors hover:underline color-[#FBFAF9] ${
+                className={`"group color-[#FBFAF9] inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline lg:px-8 ${
                   item.className
                 }`}
                 target={item.target || '_self'}

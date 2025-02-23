@@ -8,7 +8,7 @@ const Roadmap = lazy(() => import('./Roadmap'));
 
 const Home = () => {
   return (
-    <div className="flex w-full flex-col justify-center items-center">
+    <div className="flex w-full flex-col items-center justify-center">
       <Banner />
       <Suspense fallback={<div>Loading...</div>}>
         <WhatIsNixusAI />

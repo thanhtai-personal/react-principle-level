@@ -31,16 +31,28 @@ const Features = () => {
   return (
     <div className="relative mt-20 flex w-full flex-col bg-[#0E100F] lg:mt-16 lg:max-w-[1280px]">
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="text-title mt-8 flex w-full flex-col items-center justify-center px-4 lg:px-8 text-center">
+        <div className="text-title mt-8 flex w-full flex-col items-center justify-center px-4 text-center lg:px-8">
           Powerful features for
-          <span style={{ color: '#826DF9', WebkitTextFillColor: '#826DF9', fontWeight: 700 }}>
+          <span
+            style={{
+              color: '#826DF9',
+              WebkitTextFillColor: '#826DF9',
+              fontWeight: 700,
+            }}
+          >
             Nixus AI &nbsp;
-            <span style={{ color: '#999999', WebkitTextFillColor: '#999999', fontWeight: 400 }}>
+            <span
+              style={{
+                color: '#999999',
+                WebkitTextFillColor: '#999999',
+                fontWeight: 400,
+              }}
+            >
               access
             </span>
           </span>
         </div>
-        <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 px-4 lg:px-8 lg:grid lg:grid-cols-3">
+        <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 px-4 lg:grid lg:grid-cols-3 lg:px-8">
           {cardList.map((card) => (
             <AppCard data={card} key={card.id} />
           ))}
@@ -51,5 +63,3 @@ const Features = () => {
 };
 
 export default Features;
-
-
