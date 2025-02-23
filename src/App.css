@@ -1,3 +1,6 @@
+@import url(./Mobile.css);
+@import url(./Desktop.css);
+
 #root {
   margin: 0 auto;
   padding: 0;
@@ -11,9 +14,11 @@
   transition: filter 300ms;
   animation: logo-spin infinite 20s linear;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +27,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -40,3 +46,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.footer-reserved-text {
+  /* © 2025 Nixus AI. All rights reserved. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #81828A;
+}
+

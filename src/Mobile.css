@@ -1,0 +1,281 @@
+.btn-primary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4.8px;
+  background: #6E54FF;
+  box-shadow: 0px 0.8px 1.6px rgba(26, 19, 161, 0.5), 0px 0px 0px 0.8px #4F47EB, inset 0px 0.8px 0.4px rgba(255, 255, 255, 0.5);
+  border-radius: 1152px;
+}
+
+.btn-secondary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4.8px;
+  background: #14151A;
+  box-shadow: 0px 0.8px 1.6px rgba(0, 0, 0, 0.08), 0px 0px 0px 0.8px #000000, inset 0px 0.8px 0.8px rgba(255, 255, 255, 0.12);
+  border-radius: 1152px;
+}
+
+.font-inter {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9342px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FBFAF9;
+}
+
+.custom-dialog {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0px 2px 2px 1px rgba(255, 255, 255, 0.06), inset 0px -4px 4px 1px rgba(0, 0, 0, 0.2);
+  border-bottom-width: 0;
+  backdrop-filter: blur(2.5px);
+}
+
+.join-btn {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  background: #6E54FF;
+  box-shadow: 0px 1px 2px rgba(26, 19, 161, 0.5), 0px 0px 0px 1px #4F47EB, inset 0px 1px 0.5px rgba(255, 255, 255, 0.5);
+  border-radius: 1440px;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.menu-item {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FBFAF9;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 20px;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.custom-sheet {
+  background: unset;
+}
+
+.shadow-header {
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0px 2px 2px 1px rgba(255, 255, 255, 0.06), inset 0px -4px 4px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2.5px);
+}
+
+.light-bubble {
+  background: radial-gradient(70.71% 70.71% at 50% 50%, #584AA8 0%, rgba(0, 0, 0, 0) 75%);
+  filter: blur(55.0267px);
+  border-radius: 733.69px;
+}
+
+.light-border-top {
+  background: radial-gradient(115.07% 118.01% at 50% 100%, #0E100F 63%, #6B52F6 99.74%);
+  box-shadow: inset 0px 1.09329px 1.09329px #585858;
+  backdrop-filter: blur(10.9329px);
+  border-top-left-radius: 26.2391px;
+  border-top-right-radius: 26.2391px;
+}
+
+.text-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FBFAF9;
+}
+
+.text-description-secondary {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 24px;
+  background: linear-gradient(0deg, rgba(56, 61, 71, 0.15) 0%, #171717 100%), #000000;
+  box-shadow: inset 0px 1px 1px #585858;
+  backdrop-filter: blur(10px);
+  border-radius: 36px;
+}
+
+.app-card-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.app-card-description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #81828A;
+}
+
+.card-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px 36px;
+  gap: 24px;
+  background: linear-gradient(0deg, rgba(56, 61, 71, 0.15) 0%, rgba(23, 23, 23, 0) 100%), rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0px 1px 1px #585858;
+  backdrop-filter: blur(10px);
+  border-radius: 36px;
+}
+
+.text-step {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.text-step .label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #81828A;
+}
+
+.text-step .value {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin-left: 16px;
+}
+
+
+
+.road-map-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 24px;
+  background: #171717;
+  border: 1px solid #1F1F1F;
+  border-radius: 24px;
+}
+
+.road-map-card.active {
+  box-shadow: 0px 0px 12px #826DF9;
+}
+
+.text-card-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #826DF9;
+}
+
+.text-card-des {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #81828A;
+}
+
+.text-card-des ul {
+  list-style: disc;
+}
+
+.text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FBFAF9;
+}
+
+.light-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  isolation: isolate;
+  background: #0E100F;
+}

@@ -4,4 +4,5 @@ export interface IUIConfig {
   useLeftDrawer?: boolean;
   useRightDrawer?: boolean;
   fixedHeader?: boolean;
+  fixedFooter?: boolean;
 }

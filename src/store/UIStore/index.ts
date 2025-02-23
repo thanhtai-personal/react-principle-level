@@ -7,13 +7,15 @@ export class UIStore implements IUIConfig {
   public useLeftDrawer: boolean;
   public useRightDrawer: boolean;
   public fixedHeader: boolean;
+  public fixedFooter: boolean;
 
   constructor() {
     this.showHeader = true;
     this.showFooter = true;
     this.useLeftDrawer = false;
     this.useRightDrawer = false;
-    this.fixedHeader = false;
+    this.fixedHeader = true;
+    this.fixedFooter = false;
     makeObservable(this);
   }
 }

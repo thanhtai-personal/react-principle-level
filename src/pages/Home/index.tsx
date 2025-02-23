@@ -1,15 +1,28 @@
-import { Counter } from '@/components/features/Counter';
-import { Double } from '@/components/features/Double';
-import { CounterContextProvider } from '@/contexts/counter';
+import { lazy, Suspense } from 'react';
+import { Banner } from './Banner';
+
+const WhatIsNixusAI = lazy(() => import('./WhatIsNixusAI'));
+const Features = lazy(() => import('./Features'));
+const HowItWork = lazy(() => import('./HowItWork'));
+const Roadmap = lazy(() => import('./Roadmap'));
 
 const Home = () => {
   return (
-    <>
-      <CounterContextProvider>
-        <Counter />
-        <Double />
-      </CounterContextProvider>
-    </>
+    <div className="flex w-full flex-col justify-center items-center">
+      <Banner />
+      <Suspense fallback={<div>Loading...</div>}>
+        <WhatIsNixusAI />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Features />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <HowItWork />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Roadmap />
+      </Suspense>
+    </div>
   );
 };
 

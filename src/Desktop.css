@@ -1,0 +1,113 @@
+
+
+@media (min-width: 1024px) {
+  .shadow-header {
+    background: unset;
+    border-bottom: 0;
+    box-shadow: unset;
+    backdrop-filter: unset;
+  }
+
+  .wrap-header {
+    margin-top: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 274px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0px 2px 2px 1px rgba(255, 255, 255, 0.06), inset 0px -4px 4px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.5px);
+    border-radius: 1600px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .light-bubble {
+    background: radial-gradient(70.71% 70.71% at 50% 50%, #584AA8 0%, rgba(0, 0, 0, 0) 75%);
+    filter: blur(90px);
+    border-radius: 1200px;
+  }
+
+  .light-border-top {
+    background: radial-gradient(73.42% 118.01% at 50% 100%, #0E100F 63%, #6B52F6 99.74%);
+    box-shadow: inset 0px 1px 1px #585858;
+    backdrop-filter: blur(10px);
+    border-radius: 64px;
+    background-image: url(@/assets/images/fallstar.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .join-btn {
+    display: flex;
+    padding: 4px 24px;
+  }
+
+  .text-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .text-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FBFAF9;
+  }
+
+  .text-description-secondary {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-step {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .text-step .label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .text-step .value {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
