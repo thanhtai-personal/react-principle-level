@@ -5,7 +5,7 @@ const WhatIsNixusAIContent = (
   <div className="mt-[270px] flex w-full flex-col items-center justify-center lg:mt-4">
     <div className="flex w-full flex-col items-center justify-center">
       <div className="flex w-full items-center justify-center">
-        <RoundedStarIcon />
+        <RoundedStarIcon className="h-16 w-16 lg:h-20 lg:w-20" />
       </div>
 
       <div
@@ -33,9 +33,9 @@ const WhatIsNixusAI = () => {
   return (
     <div className="relative flex w-full flex-col bg-[#0E100F] lg:items-center lg:justify-center lg:px-4">
       <div className="justify-center] absolute left-0 top-2 z-10 mt-4 flex w-full justify-center lg:top-[-270px]">
-        <Graphic1 />
+        <Graphic1 className={''} />
       </div>
-      <div className="mt-[200px] w-full flex-col bg-transparent lg:mt-[60px] lg:max-w-[1280px]">
+      <div className="mt-[50vw] w-full flex-col bg-transparent lg:mt-[60px] lg:max-w-[1280px]">
         <div className="light-border-top flex min-h-[530px] w-full flex-col bg-transparent lg:hidden">
           {WhatIsNixusAIContent}
         </div>

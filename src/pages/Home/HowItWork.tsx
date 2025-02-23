@@ -13,7 +13,7 @@ const HowItWork = () => {
         <div className="text-title mt-8 flex w-full flex-col items-center justify-center px-4 text-center lg:px-8">
           How Nixus AI Works
         </div>
-        <div className="text-description-secondary lg:app-card-description mt-4 flex w-full flex-col items-center justify-center px-4 text-center font-[500] lg:px-8">
+        <div className="text-description-secondary lg:app-card-description mt-4 flex w-full flex-col items-center justify-center text-center lg:font-[500]">
           Monai integrates vast amounts of data and processes it through
           cutting-edge AI to deliver actionable insights and execute
           transactions through natural language commands

@@ -147,7 +147,7 @@
   gap: 24px;
   background: linear-gradient(0deg, rgba(56, 61, 71, 0.15) 0%, #171717 100%), #000000;
   box-shadow: inset 0px 1px 1px #585858;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 36px;
 }
 

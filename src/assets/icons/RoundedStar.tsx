@@ -1,5 +1,5 @@
-import roundedStarSvg from '@/assets/images/rounded-star.svg';
+import roundedStarSvg from '@/assets/images/fallingstar.png';
 
-export const RoundedStarIcon = () => {
-  return <img src={roundedStarSvg} />;
+export const RoundedStarIcon = ({ className }: any) => {
+  return <img src={roundedStarSvg} className={className} />;
 };
