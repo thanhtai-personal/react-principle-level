@@ -1,6 +1,6 @@
 import card1Thump from '@/assets/images/card1Thump.png';
 import card2Thump from '@/assets/images/card2Thump.png';
-import card3Thump from '@/assets/images/card3Thump.png';
+import card3Thump from '@/assets/images/cardthump.png';
 import { AppCard } from './AppCard';
 
 const cardList = [
