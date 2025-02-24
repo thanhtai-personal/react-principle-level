@@ -1,5 +1,7 @@
-import { Graphic1 } from '@/assets/icons/Graphic1';
+import Graphic1 from '@/assets/icons/Graphic1';
 import { RoundedStarIcon } from '@/assets/icons/RoundedStar';
+import FallingStarBg from '@/components/animations/fallingStar';
+import curvedLine3 from '@/assets/images/curvedline3.png';
 
 const WhatIsNixusAIContent = (
   <div className="mt-[270px] flex w-full flex-col items-center justify-center lg:mt-4">
@@ -39,9 +41,15 @@ const WhatIsNixusAI = () => {
         <div className="light-border-top flex min-h-[530px] w-full flex-col bg-transparent lg:hidden">
           {WhatIsNixusAIContent}
         </div>
-        <div className="light-border-top hidden h-[375px] w-full flex-col bg-transparent lg:flex">
-          <div className="light-border-bg h-full w-full"></div>
-        </div>
+        <FallingStarBg className="light-border-top hidden h-[375px] w-full flex-col overflow-hidden bg-transparent lg:flex">
+          <div className="">
+            <img
+              src={curvedLine3}
+              className="absolute bottom-0 left-0 z-0 w-[30%]"
+            />
+            {/* <div className="light-border-bg h-full w-full"></div> */}
+          </div>
+        </FallingStarBg>
         <div className="hidden w-full flex-col bg-transparent lg:flex">
           {WhatIsNixusAIContent}
         </div>

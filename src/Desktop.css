@@ -54,7 +54,7 @@
     box-shadow: inset 0px 1px 1px #585858;
     backdrop-filter: blur(10px);
     border-radius: 64px;
-    background-image: url(@/assets/images/fallstar.svg);
+    /* background-image: url(@/assets/images/fallstar.svg); */
     background-size: cover;
     background-repeat: no-repeat;
   }

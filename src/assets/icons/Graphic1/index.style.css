@@ -1,0 +1,22 @@
+.graphic-1 .bg-1 {
+  background-image: url(@/assets/images/graphic/eclipse6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
