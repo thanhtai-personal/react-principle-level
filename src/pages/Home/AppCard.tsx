@@ -1,10 +1,17 @@
-import { EaseInBackFramer } from '@/components/common/framer/EaseInBackFramer';
+import { FadeLeft } from '@/components/common/framer/FadeLeft';
 import { IntersectionObserverView } from '@/components/common/IntersectionObservableView';
+import useResponsive from '@/hooks/common/useResponsive';
 
-export const AppCard = ({ data }: any) => {
+export const AppCard = ({ data, index }: any) => {
+  const { isDesktop } = useResponsive();
+
   return (
-    <IntersectionObserverView id={`intersection-${data.id}`}>
-      <EaseInBackFramer>
+    <IntersectionObserverView
+      id={`intersection-${data.id}`}
+      isInfinite={false}
+      className="flex items-center justify-center"
+    >
+      <FadeLeft duration={0.5} off={!isDesktop} delay={index * 0.2 + 0.1}>
         <div className="app-card w-full max-w-[500px] lg:h-full lg:justify-end">
           <div className="app-card-thumb">
             <img src={data.thumb} alt="" />
@@ -16,7 +23,7 @@ export const AppCard = ({ data }: any) => {
             {data.description}
           </div>
         </div>
-      </EaseInBackFramer>
+      </FadeLeft>
     </IntersectionObserverView>
   );
 };

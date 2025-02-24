@@ -33,7 +33,7 @@ const WhatIsNixusAI = () => {
   return (
     <div className="relative flex w-full flex-col bg-[#0E100F] lg:items-center lg:justify-center lg:px-4">
       <div className="justify-center] absolute left-0 top-2 z-10 mt-4 flex w-full justify-center lg:top-[-270px]">
-        <Graphic1 className={'max-w-[730px]'} />
+        <Graphic1 className={'lg:max-w-[730px]'} />
       </div>
       <div className="mt-[50vw] w-full flex-col bg-transparent lg:mt-[60px] lg:max-w-[1280px]">
         <div className="light-border-top flex min-h-[530px] w-full flex-col bg-transparent lg:hidden">

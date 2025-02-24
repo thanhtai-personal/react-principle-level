@@ -53,8 +53,8 @@ const Features = () => {
           </span>
         </div>
         <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 px-4 lg:grid lg:grid-cols-3 lg:px-8">
-          {cardList.map((card) => (
-            <AppCard data={card} key={card.id} />
+          {cardList.map((card, index) => (
+            <AppCard data={card} key={card.id} index={index} />
           ))}
         </div>
       </div>

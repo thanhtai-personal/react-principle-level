@@ -53,7 +53,7 @@ export function AppTopMenu() {
                   }
                 }}
                 // target={item.target || '_self'}
-                className={`flex w-full items-center justify-center py-2 text-lg font-semibold ${item.className}`}
+                className={`flex w-full cursor-pointer items-center justify-center py-2 text-lg font-semibold hover:underline ${item.className}`}
               >
                 {item.label}
               </a>

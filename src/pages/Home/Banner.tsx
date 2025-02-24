@@ -10,7 +10,7 @@ export const Banner = () => {
           <div className="text-title max-w-[900px] text-center">
             Your AI-Driven Gateway to High-Performance DeFi
           </div>
-          <div className="text-description mt-10 max-w-[280px] text-center lg:max-w-[640px]">
+          <div className="text-description mt-10 text-center lg:max-w-[640px]">
             Experience seamless blockchain insights and natural language
             transactions on the Monad network.
           </div>

@@ -3,6 +3,9 @@ import triangleRoundedIcon from '../../assets/images/triangle-rounded.svg';
 import quadrilateralRoundedIcon from '../../assets/images/quadrilateral-rounded.svg';
 import pentagonRoundedIcon from '../../assets/images/pentagon-rounded.svg';
 import { ArrowProgressBar } from '@/components/common/ArrowProgress';
+import { FadeLeft } from '@/components/common/framer/FadeLeft';
+import { IntersectionObserverView } from '@/components/common/IntersectionObservableView';
+import useResponsive from '@/hooks/common/useResponsive';
 
 const roadMapItems = [
   {
@@ -52,6 +55,8 @@ const roadMapItems = [
 ];
 
 const Roadmap = () => {
+  const { isDesktop } = useResponsive();
+
   return (
     <div className="relative mt-6 flex w-full flex-col justify-center px-4 py-6 lg:max-w-[1280px] lg:px-8">
       <div className="absolute -bottom-[225px] flex w-full items-center justify-center">
@@ -60,14 +65,19 @@ const Roadmap = () => {
       <div className="text-title flex w-full justify-center whitespace-nowrap text-center">
         Roadmap
       </div>
-      <ArrowProgressBar
-        className={'hidden h-4 w-full lg:flex'}
-        value={50}
-        id="hor-arrow-progress"
-      />
+      <IntersectionObserverView
+        id={`intersection-ver-arrow-progress`}
+        isInfinite={false}
+      >
+        <ArrowProgressBar
+          className={'hidden h-4 w-full lg:flex'}
+          value={50}
+          id="hor-arrow-progress"
+        />
+      </IntersectionObserverView>
       <div className="flex h-full">
         <ArrowProgressBar
-          className={'flex h-full w-12 lg:hidden'}
+          className={'flex h-full min-h-[600px] w-12 lg:hidden'}
           value={50}
           vertical
           id="ver-arrow-progress"
@@ -75,22 +85,39 @@ const Roadmap = () => {
         <div className="mt-8 flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-4 lg:justify-center lg:gap-6">
           {roadMapItems.map((item, index) => {
             return (
-              <div
+              <IntersectionObserverView
+                id={`intersection-road-map-card-${item.id}`}
+                isInfinite={false}
                 key={item.id}
-                className={`road-map-card w-full lg:h-full ${item.active ? 'active' : ''}`}
               >
-                <div className="flex items-center lg:flex-col lg:items-start">
-                  {item.icon && (
-                    <img src={item.icon} alt="icon" className="road-map-icon" />
-                  )}
-                  <div className="text-card-title ml-8 justify-center text-center lg:ml-0 lg:mt-4">
-                    {item.title}
+                <FadeLeft
+                  duration={0.5}
+                  delay={index * 0.2}
+                  value={100}
+                  off={!isDesktop}
+                >
+                  <div
+                    key={item.id}
+                    className={`road-map-card w-full lg:h-full ${item.active ? 'active' : ''}`}
+                  >
+                    <div className="flex items-center lg:flex-col lg:items-start">
+                      {item.icon && (
+                        <img
+                          src={item.icon}
+                          alt="icon"
+                          className="road-map-icon"
+                        />
+                      )}
+                      <div className="text-card-title ml-8 justify-center text-center lg:ml-0 lg:mt-4">
+                        {item.title}
+                      </div>
+                    </div>
+                    <div className="text-card-des pl-6 text-left">
+                      {item.description}
+                    </div>
                   </div>
-                </div>
-                <div className="text-card-des pl-6 text-left">
-                  {item.description}
-                </div>
-              </div>
+                </FadeLeft>
+              </IntersectionObserverView>
             );
           })}
         </div>

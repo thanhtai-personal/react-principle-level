@@ -15,7 +15,7 @@ export const Footer = ({ fixed = false }: any) => {
       <div className="w-full px-2 lg:max-w-[1280px] lg:px-8">
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <div className="flex flex-col lg:flex-1">
-            <div className="flex w-full items-center">
+            <div className="flex w-full items-center justify-center lg:justify-start">
               <a href="#" className="mr-6 flex items-center justify-center">
                 <LogoIcon className="mr-2 flex h-9 w-9 items-center justify-center" />
                 <div className="flex h-6 items-center justify-center">
@@ -26,7 +26,7 @@ export const Footer = ({ fixed = false }: any) => {
               </a>
             </div>
 
-            <div className="mt-10 flex w-full flex-col">
+            <div className="mt-10 flex w-full flex-col items-center justify-center lg:items-start lg:justify-start">
               <div className="text">Building a project on Monad?</div>
               <button className="btn-primary mr-4 mt-2 flex w-fit items-center justify-center px-4 py-2 duration-200 hover:-translate-y-[3px] lg:px-8">
                 Get in touch
@@ -42,9 +42,9 @@ export const Footer = ({ fixed = false }: any) => {
               </div>
             </div>
 
-            <div className="flex flex-1 flex-col lg:ml-28 lg:flex-[0]">
+            <div className="flex flex-1 flex-col items-end lg:ml-28 lg:flex-[0]">
               <div className="text-description-secondary">Community</div>
-              <div className="mt-6 flex flex-col">
+              <div className="mt-6 flex flex-col items-end">
                 <div className="text flex items-center duration-200 hover:-translate-y-[3px] hover:underline">
                   <TwitterIcon />
                   <div className="ml-2">Twitter</div>

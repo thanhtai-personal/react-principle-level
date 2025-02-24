@@ -1,4 +1,18 @@
 
+@media (min-width: 750px) {
+  .text-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FBFAF9;
+  }
+}
+
 
 @media (min-width: 1024px) {
   .shadow-header {
