@@ -8,6 +8,7 @@ export default {
   'sonarjs/prefer-read-only-props': 'off',// 'warn',
   'sonarjs/table-header': 'off', // 'warn',
   'sonarjs/pseudo-random': 'warn', // 'error',
+  'sonarjs/no-commented-code': 'off',
   'sonarjs/cognitive-complexity': ['warn', 15], // ✅ Set max complexity (default: 20)
   'complexity': ['warn', { 'max': 15 }], // ✅ Alternative built-in rule for function complexity
 }
