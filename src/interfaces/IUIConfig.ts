@@ -5,4 +5,5 @@ export interface IUIConfig {
   useRightDrawer?: boolean;
   fixedHeader?: boolean;
   fixedFooter?: boolean;
+  isAnimationView?: boolean;
 }

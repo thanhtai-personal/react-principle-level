@@ -48,9 +48,6 @@ export const ArrowProgressBar: React.FC<ArrowProgressBarProps> = ({
 
   const percentPixel = (containerSize * progress) / 100;
 
-  console.log('percentPixel', percentPixel);
-  console.log('containerSize', containerSize);
-
   return (
     <div id={id} className={className} ref={containerRef}>
       {vertical ? (

@@ -8,6 +8,7 @@ export class UIStore implements IUIConfig {
   public useRightDrawer: boolean;
   public fixedHeader: boolean;
   public fixedFooter: boolean;
+  public isAnimationView: boolean;
 
   constructor() {
     this.showHeader = true;
@@ -16,6 +17,7 @@ export class UIStore implements IUIConfig {
     this.useRightDrawer = false;
     this.fixedHeader = true;
     this.fixedFooter = false;
+    this.isAnimationView = true;
     makeObservable(this);
   }
 }
