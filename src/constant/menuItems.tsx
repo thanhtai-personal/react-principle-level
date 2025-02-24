@@ -26,8 +26,8 @@ export const menuItems: TMenuItem[] = [
   {
     id: 4,
     name: 'how-it-works',
-    label: topElementIds.how,
-    url: 'how-it-works',
+    label: 'How it works',
+    url: topElementIds.how,
     className: 'menu-item',
   },
   {
