@@ -9,9 +9,14 @@ export const AppCard = ({ data, index }: any) => {
     <IntersectionObserverView
       id={`intersection-${data.id}`}
       isInfinite={false}
-      className="flex items-center justify-center"
+      className="flex items-center justify-center lg:h-full"
     >
-      <FadeLeft duration={0.5} off={!isDesktop} delay={index * 0.2 + 0.1}>
+      <FadeLeft
+        duration={0.5}
+        off={!isDesktop}
+        delay={index * 0.2 + 0.1}
+        className={'lg:h-full'}
+      >
         <div className="app-card w-full max-w-[500px] lg:h-full lg:justify-end">
           <div className="app-card-thumb">
             <img src={data.thumb} alt="" />

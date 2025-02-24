@@ -89,16 +89,16 @@ const HowItWork = () => {
 
               <IntersectionObserverView
                 id={`intersection-how-it-work-arrow-1`}
-                className="flex items-center justify-center"
+                className="ml-2 flex !w-fit items-center justify-center"
                 isInfinite={false}
               >
                 <FadeLeft
                   off={!isDesktop}
                   duration={0.3}
                   delay={0.5}
-                  className="flex items-center justify-center"
+                  className="flex !w-fit items-center justify-center"
                 >
-                  <div className="hidden w-[12vw] items-center justify-center px-2 lg:flex">
+                  <div className="hidden w-[12vw] items-center justify-center lg:flex">
                     <img className="w-full" src={arrowSvg} />
                   </div>
                 </FadeLeft>
@@ -124,16 +124,16 @@ const HowItWork = () => {
               </IntersectionObserverView>
               <IntersectionObserverView
                 id={`intersection-how-it-work-arrow-2`}
-                className="flex items-center justify-center"
+                className="flex !w-fit items-center justify-center"
                 isInfinite={false}
               >
                 <FadeLeft
                   off={!isDesktop}
                   duration={0.3}
                   delay={1.5}
-                  className="flex items-center justify-center"
+                  className="flex !w-fit items-center justify-center"
                 >
-                  <div className="hidden w-[15vw] items-center justify-center px-2 lg:flex">
+                  <div className="hidden w-[15vw] items-center justify-center lg:flex">
                     <img className="w-full" src={arrowSvg} />
                   </div>
                 </FadeLeft>
