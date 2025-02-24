@@ -1,5 +1,5 @@
 import { EaseInBackFramer } from '@/components/common/framer/EaseInBackFramer';
-import { IntersectionObserverView } from "@/components/common/IntersectionObservableView";
+import { IntersectionObserverView } from '@/components/common/IntersectionObservableView';
 
 export const AppCard = ({ data }: any) => {
   return (

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 export interface IIntersectionObserverView {
   children: ReactNode;
@@ -8,7 +8,13 @@ export interface IIntersectionObserverView {
   stateCallback?: (isElementInView?: boolean) => void;
 }
 
-export const IntersectionObserverView = ({ children, className, id, isInfinite = false, stateCallback }: IIntersectionObserverView) => {
+export const IntersectionObserverView = ({
+  children,
+  className,
+  id,
+  isInfinite = false,
+  stateCallback,
+}: IIntersectionObserverView) => {
   const [loaded, setLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -39,8 +45,8 @@ export const IntersectionObserverView = ({ children, className, id, isInfinite =
   }, []);
 
   return (
-    <div id={id} ref={ref} className={`w-full min-h-10 ${className}`}>
-      {loaded ? children : ""}
+    <div id={id} ref={ref} className={`min-h-10 w-full ${className}`}>
+      {loaded ? children : ''}
     </div>
   );
 };
